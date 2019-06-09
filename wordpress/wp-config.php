@@ -29,7 +29,7 @@
  * Ersetze datenbankname_hier_einfuegen
  * mit dem Namen der Datenbank, die du verwenden möchtest.
  */
-define( 'DB_NAME', 'test' );
+define( 'DB_NAME', 'wp_musikschule' );
 
 /**
  * Ersetze benutzername_hier_einfuegen
