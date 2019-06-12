@@ -1,2 +1,4 @@
 <?php wp_head();?>
-das ist der header
+<header>
+    <?php include ("partials/navbar.php"); ?>
+</header>

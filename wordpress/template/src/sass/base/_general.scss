@@ -6,6 +6,8 @@
 
 body{
   font-size: $font-size-base-desktop;
+  font-weight: normal;
+  font-family: $font-family-base;
 
   @include media-breakpoint-up(md) {
     font-size: $font-size-base-mobile;
@@ -16,7 +18,57 @@ body{
   Typographie
  */
 
+h1, h2,h3,h4{
+  color: $color-orange;
+  text-transform: uppercase;
+  font-family: $font-family-serif;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+
+
 /*
   Listen
  */
 
+
+
+.dashboard-button{
+  background: #ccc;
+  border: 1px solid black;
+  min-height: 200px;
+  text-align: center;
+}
+img{
+  max-width: 100%;
+}
+.kurs-teaser{
+  background: #ccc;
+}
+table{
+  width: 100%;
+}
+thead{
+  width: 100%;
+}
+tbody{
+  width: 100%;
+}
+td{
+  background: #ccc;
+  border: solid 1px black;
+}
+td.blocked{
+  background: red;
+}

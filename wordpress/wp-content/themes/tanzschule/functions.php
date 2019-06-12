@@ -2,11 +2,13 @@
 function enquiIt()
 {
 
-    wp_register_style('style', get_template_directory_uri() . '/style.css');
+    wp_register_style('style', get_template_directory_uri() . '/dist/css/main.min.css');
     wp_enqueue_style('style');
 
-    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
-    wp_enqueue_style('bootstrap');
+    wp_register_script('script', get_template_directory_uri() . '/dist/js/main.min.js');
+    wp_enqueue_script('script');
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'enquiIt' );
