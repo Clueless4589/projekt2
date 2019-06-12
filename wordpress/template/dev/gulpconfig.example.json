@@ -1,0 +1,9 @@
+{
+  "devServerPath": "@todo: replace with dev server path, e.g. D:/htdocs/",
+
+  "devServerDeployment": false,
+  "devServerDistPath": "@todo: replace with template path, e.g. template/dist/",
+
+  "devServerCmsDeployment": false,
+  "devServerCmsDistPath": "@todo: replace with cms path, e.g. wp-content/themes/your-theme/dist/"
+}

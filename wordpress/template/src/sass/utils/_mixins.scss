@@ -1,0 +1,17 @@
+/* 
+===================
+ Mixins
+===================
+*/
+
+// Makes an element keep a certain aspect ratio.
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+    content: '';
+  }
+}

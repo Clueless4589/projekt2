@@ -1,0 +1,22 @@
+/*
+ ==================
+  General
+ ==================
+*/
+
+body{
+  font-size: $font-size-base-desktop;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base-mobile;
+  }
+}
+
+/*
+  Typographie
+ */
+
+/*
+  Listen
+ */
+
