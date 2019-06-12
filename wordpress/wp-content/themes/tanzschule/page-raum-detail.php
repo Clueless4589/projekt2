@@ -13,24 +13,24 @@ $tage = array("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag");
                             <table>
                                 <thead>
                                 <tr>
-                                    <td>
+                                    <th>
                                         Uhrzeit
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Mo
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Di
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Mi
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Do
-                                    </td>
-                                    <td>
+                                    </th>
+                                    <th>
                                         Fr
-                                    </td>
+                                    </th>
                                 </tr>
                                 </thead>
 

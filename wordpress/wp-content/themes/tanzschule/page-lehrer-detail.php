@@ -35,6 +35,7 @@ foreach ($kurse as $item) {
 
                     </div>
                 </div>
+                <hr>
                 <div class="row lehrer-schueler">
                     <div class="col-12">
                         <h2>Schüler</h2>
@@ -43,6 +44,7 @@ foreach ($kurse as $item) {
                         <p><?php echo $schueler ?></p>
                     </div>
                 </div>
+                <hr>
 
                 <div class="row lehrer-kurse">
                     <div class="col-12">

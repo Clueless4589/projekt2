@@ -46,7 +46,7 @@ $unterrichtsEinheiten = getUnterrichtsEinheiten();
                         </table>
                     </div>
                 </div>
-
+                <hr>
                 <div class="row">
                     <div class="col-12">
                         <h3>Schüler</h3>
@@ -60,7 +60,7 @@ $unterrichtsEinheiten = getUnterrichtsEinheiten();
                         <p><?php echo $result ?></p>
                     </div>
                 </div>
-
+                <hr>
                 <div class="row">
                     <?php foreach ($unterrichtsEinheiten as $item){?>
                         <div class="col-4">

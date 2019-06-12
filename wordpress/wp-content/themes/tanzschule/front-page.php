@@ -14,7 +14,7 @@
                        </a>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <a href="<?php echo get_template_directory_uri()?>/verwalter-uebersicht">
+                        <a href="<?php echo get_home_url()?>/verwalter-uebersicht">
                             <div class="teaser manager">
                                 <p>Verwalter</p>
                             </div>

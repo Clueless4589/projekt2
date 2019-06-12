@@ -3,3 +3,18 @@
   Buttons
  ==================
 */
+
+.btn{
+  padding: 1rem;
+ background-color: $color-orange;
+  border-radius:20px;
+  color:$color-white;
+  font-size:1.3rem;
+  min-width: 150px;
+
+  &:hover{
+    border:2px solid $color-orange;
+    background-color: transparent;
+    color:$color-orange;
+  }
+}
