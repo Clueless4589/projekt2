@@ -2,7 +2,7 @@
 function enquiIt()
 {
 
-    wp_register_style('style', get_template_directory_uri() . '/css/style.css');
+    wp_register_style('style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('style');
 
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
@@ -17,10 +17,39 @@ function getLehrerliste(){
     $result = $wpdb->get_results( $query);
     return $result;
 }
+function getLehrer(){
+    global $wpdb;
+    $query = "SELECT ms_lehrer.Vorname, ms_lehrer.Nachname, ms_lehrer.Stundensatz, ms_instrumente.Bezeichnung FROM ms_lehrer
+JOIN ms_instrumentlehrer ON ms_lehrer.LehrerId = ms_instrumentlehrer.LehrerId
+JOIN ms_instrumente ON ms_instrumentlehrer.InstrumentId = ms_instrumente.InstrumentId
+WHERE ms_lehrer.LehrerId =" .$_GET['id'];
+
+    $result = $wpdb->get_results( $query);
+    return $result;
+}
 /*Für Lehrerliste*/
 function getInstrumente($id){
     global $wpdb;
     $query = "SELECT ms_instrumente.Bezeichnung FROM ms_instrumente JOIN ms_instrumentlehrer on  ms_instrumentlehrer.InstrumentId = ms_instrumente.InstrumentId WHERE ms_instrumentlehrer.LehrerId = " . $id;
+    $result = $wpdb->get_results( $query);
+    return $result;
+}
+
+function getSchuelerLehrer(){
+
+    global $wpdb;
+    $query = "SELECT ms_schueler.Vorname, ms_schueler.Nachname FROM ms_unterricht
+JOIN ms_schuelerunterricht ON ms_unterricht.UnterrichtId = ms_schuelerunterricht.UnterrichtId
+JOIN ms_schueler ON ms_schuelerunterricht.SchuelerId = ms_schueler.SchuelerId
+WHERE ms_unterricht.LehrerId = " . $_GET['id'];
+
+    $result = $wpdb->get_results( $query);
+    return $result;
+}
+function getKurseLehrer(){
+    global $wpdb;
+    $query = "SELECT ms_unterricht.UnterrichtId, ms_unterricht.Tag Where ms_unterricht.LehrerId =" . $_GET['id'];
+
     $result = $wpdb->get_results( $query);
     return $result;
 }
@@ -56,11 +85,12 @@ WHERE ms_unterricht.UnterrichtId = " . $_GET['id'];
     return $result;
 }
 
-function getKursSchueler() {
+function getKursSchueler($id = false) {
     global $wpdb;
+    $kursId = $id ? $id : $_GET['id'];
     $query = "SELECT ms_schueler.Vorname, ms_schueler.Nachname FROM ms_schueler 
 JOIN ms_schuelerunterricht on ms_schueler.SchuelerId = ms_schuelerunterricht.SchuelerId
-WHERE ms_schuelerunterricht.UnterrichtId = " .$_GET['id'];
+WHERE ms_schuelerunterricht.UnterrichtId = " .$kursId;
 
     $result =$wpdb->get_results( $query);
     return $result;
@@ -72,5 +102,15 @@ function getUnterrichtsEinheiten(){
 WHERE ms_unterrichtseinheit.UnterrichtId = " .$_GET['id'];
 
     $result =$wpdb->get_results( $query);
+    return $result;
+}
+function getAllKurse(){
+    global $wpdb;
+    $query = "SELECT ms_unterricht.UnterrichtId, ms_unterricht.Tag, ms_unterricht.LehrerId, ms_unterricht.RaumId, ms_lehrer.Vorname as LehrerVorname, ms_lehrer.Nachname as LehrerNachname, ms_instrumente.Bezeichnung as Instrument, ms_raeume.Bezeichnung as RaumBezeichnung FROM ms_unterricht
+JOIN ms_lehrer ON ms_unterricht.LehrerId = ms_lehrer.LehrerId
+JOIN ms_instrumente ON ms_unterricht.InstrumentId = ms_instrumente.InstrumentId
+JOIN ms_raeume on ms_unterricht.RaumId = ms_raeume.RaumId";
+
+        $result =$wpdb->get_results( $query);
     return $result;
 }
