@@ -7,8 +7,8 @@
                     <table>
                         <thead>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>

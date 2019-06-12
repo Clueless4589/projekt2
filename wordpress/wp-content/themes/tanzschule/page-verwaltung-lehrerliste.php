@@ -22,18 +22,18 @@
                         <table>
                             <thead>
                             <tr>
-                                <td>
+                                <th>
                                     Name
-                                </td>
-                                <td>
+                                </th>
+                                <th>
                                     Nachname
-                                </td>
-                                <td>
+                                </th>
+                                <th>
                                     Instrument
-                                </td>
-                                <td>
+                                </th>
+                                <th>
                                     Gehalt
-                                </td>
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
