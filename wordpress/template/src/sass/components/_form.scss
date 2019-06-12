@@ -12,9 +12,13 @@ label{
 }
 
 
-input[type="text"], select{
+input[type="text"], select, textarea{
   border: 2px solid $color-orange;
   border-radius: 30px;
   padding:1rem;
   width:100%;
+}
+
+textarea{
+  border-radius: 0;
 }

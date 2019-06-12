@@ -2,42 +2,40 @@
     <div class="main">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-10 col-md-10 col-xl-10">
+                <div class="col-10 col-md-10">
                     <h1>Statistiken</h1>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                monatliche Einnahmen
-                            </td>
-                            <td>
-                                1
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Anzahl der Lehrer
-                            </td>
-                            <td>
-                                1
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                anzahl der Schüler
-                            </td>
-                            <td>
-                                1
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-10 col-md-6">
+                            <table class="info-table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        monatliche Einnahmen:
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Anzahl der Lehrer:
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        anzahl der Schüler:
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
