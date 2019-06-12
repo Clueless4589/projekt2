@@ -36,3 +36,25 @@
 .lehrer{
   background-image: url("../img/lehrer.jpg");
 }
+
+.teaser__kurs{
+  &:hover{
+    box-shadow:6px 5px 7px 0  rgba($color-black, 0.3);
+  }
+
+  div{
+    padding:1rem;
+    background-color: $color-lightgray;
+    p{
+      color:$text-color;
+    }
+  }
+}
+
+.teaser__kurs-link{
+  &:hover{
+    p{
+      color:$text-color;
+    }
+  }
+}
