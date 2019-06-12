@@ -5,7 +5,10 @@ function enquiIt()
     wp_register_style('style', get_template_directory_uri() . '/dist/css/main.min.css');
     wp_enqueue_style('style');
 
-    wp_register_script('script', get_template_directory_uri() . '/dist/js/main.min.js');
+    wp_register_script('main', get_template_directory_uri() . '/dist/js/main.min.js');
+    wp_enqueue_script('main');
+
+    wp_register_script('script', get_template_directory_uri() . '/js/scripts.js');
     wp_enqueue_script('script');
 
 
@@ -50,7 +53,7 @@ WHERE ms_unterricht.LehrerId = " . $_GET['id'];
 }
 function getKurseLehrer(){
     global $wpdb;
-    $query = "SELECT ms_unterricht.UnterrichtId, ms_unterricht.Tag Where ms_unterricht.LehrerId =" . $_GET['id'];
+    $query = "SELECT ms_unterricht.UnterrichtId, ms_unterricht.Tag FROM ms_unterricht WHERE ms_unterricht.LehrerId =" . $_GET['id'];
 
     $result = $wpdb->get_results( $query);
     return $result;
@@ -116,3 +119,14 @@ JOIN ms_raeume on ms_unterricht.RaumId = ms_raeume.RaumId";
         $result =$wpdb->get_results( $query);
     return $result;
 }
+function getRaumKurse($id){
+    global $wpdb;
+    $query = "SELECT ms_unterricht.UnterrichtId, ms_unterricht.Tag, ms_unterricht.Uhrzeit FROM ms_unterricht WHERE ms_unterricht.RaumId = " . $_POST['id'];
+
+    $result =$wpdb->get_results( $query);
+    echo json_encode($result);
+    die();
+}
+
+add_action( 'wp_ajax_getRaumKurse', 'getRaumKurse' );
+add_action( 'wp_ajax_nopriv_getRaumKurse', 'getRaumKurse' );

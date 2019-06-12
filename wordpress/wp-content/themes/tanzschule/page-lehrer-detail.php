@@ -7,6 +7,11 @@ foreach ($schuelerLehrer as $item) {
     $schuelercount++;
 }
 $schueler = rtrim($schueler, ", ");
+$kurse = getKurseLehrer();
+print_r($kurse);
+foreach ($kurse as $item) {
+    $kurseString .= $item->KursId . " " . $item->Tag . ", ";
+}
 ?>
 <div class="main">
     <div class="container-fluid">
@@ -44,7 +49,7 @@ $schueler = rtrim($schueler, ", ");
                         <h2>Kurse</h2>
                         <!--foreach !!-->
 
-                        <p>Kurs,Kurs,Kurs,Kurs</p>
+                        <p><?php echo $kurseString ?></p>
                     </div>
                 </div>
             </div>
