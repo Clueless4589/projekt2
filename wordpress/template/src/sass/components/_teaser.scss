@@ -1,0 +1,38 @@
+/*
+ ==================
+  Components
+ ==================
+*/
+
+.teaser{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  min-height: 300px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  p{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding:1rem;
+    background-color:$color-orange;
+    margin:0;
+    text-align: center;
+    font-size: 2rem;
+    color: $color-white;
+    font-family: $headings-font-family;
+  }
+}
+
+.manager{
+  background-image: url("../img/manager.jpg");
+}
+
+.lehrer{
+  background-image: url("../img/lehrer.jpg");
+}

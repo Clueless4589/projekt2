@@ -1,0 +1,20 @@
+/*
+ ==================
+  Forms
+ ==================
+*/
+
+label{
+  display:block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left:1rem;
+}
+
+
+input[type="text"]{
+  border: 2px solid $color-orange;
+  border-radius: 30px;
+  padding:1rem;
+  width:100%;
+}
