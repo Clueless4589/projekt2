@@ -1,6 +1,5 @@
 <?php get_header();
 $kurse = getLehrerWochenplan();
-print_r($kurse)
 ?>
     <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
         <h1>Lehrer Wochenplan</h1>
@@ -20,11 +19,13 @@ print_r($kurse)
             }
         }
         foreach ($result as $tag) {
+            //TODO: Link refactor
             ?>
             <h2><?php echo $tag['0']->Tag ?></h2>
             <div class="row">
                 <?php foreach ($tag as $unterricht) { ?>
                     <div class="col-12 col-lg-4">
+                        <a href="<?php echo get_home_url() . '/kurs-detail?id='.$unterricht->UnterrichtId ?>">
                         <div class="kurs-teaser">
                             <img src="<?php echo get_template_directory_uri() ?>/img/test.png" alt="">
                             <div class="row">
@@ -36,6 +37,7 @@ print_r($kurse)
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
                     <?php
                 }
