@@ -1,0 +1,35 @@
+/*Theme Name: Tanzschule
+Author: ICH
+*/
+
+h1{
+    color: blue;
+}
+.dashboard-button{
+    background: #ccc;
+    border: 1px solid black;
+    min-height: 200px;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+.kurs-teaser{
+    background: #ccc;
+}
+table{
+    width: 100%;
+}
+thead{
+    width: 100%;
+}
+tbody{
+    width: 100%;
+}
+td{
+    background: #ccc;
+    border: solid 1px black;
+}
+td.blocked{
+    background: red;
+}
