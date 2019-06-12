@@ -5,6 +5,9 @@ function enquiIt()
     wp_register_style('style', get_template_directory_uri() . '/dist/css/main.min.css');
     wp_enqueue_style('style');
 
+    wp_register_script('script', get_template_directory_uri() . '/dist/js/main.min.js');
+    wp_enqueue_script('script');
+
 
 }
 
