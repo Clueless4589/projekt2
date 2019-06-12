@@ -12,6 +12,29 @@
 
 /* roboto-300 - latin */
 @font-face {
+  font-family: 'RobotoMono';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/RobotoMono-Bold.ttf'); /* IE9 Compat Modes */
+  src: local('Roboto Mono'), local('Roboto-Mono'),
+  url('../fonts/RobotoMono-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* roboto-300 - latin */
+@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;

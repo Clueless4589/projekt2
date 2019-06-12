@@ -5,66 +5,38 @@
 */
 
 // Primary colors
+$color-orange: rgb(255, 195, 0);
+$color-red: rgb(255, 87,51);
+$color-lemon: rgb(218,247, 166);
 
 // Secondary colors
+$color-gray: rgb(100,100,100);
+$color-lightgray: rgb(220,220,220);
+$color-darkgray: rgb(50,50,50);
+
 
 // Other colors
 $color-white:           rgb(255, 255, 255);
 $color-black:           rgb(0, 0, 0);
 
-// Themes
-$themes: (
-  // name, primary, secondary)
-  //("sexualhormone", $color-sexualhormone, $color-sexualhormone-dark, $color-sexualhormone-light),
-  //("indikationen", $color-indikationen, $color-indikationen-dark, $color-indikationen-light),
-  //("spezialisten", $color-spezialisten, $color-spezialisten-dark, $color-spezialisten-light),
-  //("fortbildung", $color-fortbildung, $color-fortbildung-dark, $color-fortbildung-light),
-  //("materialien", $color-materialien, $color-materialien-dark, $color-materialien-light),
-);
-
-//Theme usage:
-//@each $name, $bg-color, $text-color in $themes {
-//  .ap-element--theme-#{$name} {
-//    background-color: $bg-color;
-//    color: $text-color;
-//  }
-//}
 
 /*
 ===================
  Fonts
 ===================
 */
-$font-family-serif:         'Roboto', serif;
+$font-family-serif:         'RobotoMono', serif;
 $font-family-sans-serif:    'Roboto', sans-serif;
 
 $font-family-base:          $font-family-sans-serif;
-$headings-font-family:      $font-family-base;
+$headings-font-family:      $font-family-serif;
 
-//$text-color:                $color-hs-blue;
-//$link-color:                $color-hs-blue;
-//$link-hover-color:          $color-hs-blue;
-
-$link-hover-decoration:     underline;
+$text-color:$color-darkgray;
+$link-color:                $color-red;
+$link-hover-color:          $color-gray;
 
 $font-size-base-desktop:    16px;
 $font-size-base-mobile:     22px;
 
-/*
-===================
- Sizes
-===================
-*/
 
-/*
-===================
- Z-index
-===================
-*/
-
-/*
-===================
- Bootstrap
-===================
-*/
 
