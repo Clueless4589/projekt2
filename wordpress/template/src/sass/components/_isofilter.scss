@@ -1,0 +1,16 @@
+.button-group{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.element-item-container a{
+  padding:1rem;
+  border:1px solid $color-orange;
+  p{
+    margin:0;
+  }
+  a{
+    font-size: 1rem;
+  }
+}
