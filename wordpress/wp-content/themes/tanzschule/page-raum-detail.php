@@ -3,7 +3,7 @@ $zeiten = array("9:00","9:30","10:00","10:30", "11:00", "11.30","12:00", "12:30"
 $tage = array("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag");
 
 ?>
-    <div class="main">
+    <div id="raumdetail" class="main">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-10 col-xl-10">

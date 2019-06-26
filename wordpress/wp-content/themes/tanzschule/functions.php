@@ -208,6 +208,11 @@ function getRaumKurse($id){
     echo json_encode($result);
     die();
 }
+/**
+ * Wordpress function to bind actions
+ */
+add_action( 'wp_ajax_getRaumKurse', 'getRaumKurse' );
+
 function getRaumInstrumente($id){
     global $wpdb;
     $query = "SELECT ms_instrumente.Bezeichnung AS Instrument, ms_rauminstrumente.Raumid  FROM ms_rauminstrumente JOIN ms_instrumente ON ms_instrumente.InstrumentId = ms_rauminstrumente.InstrumentenId WHERE ms_rauminstrumente.RaumId = ". $id;
@@ -215,11 +220,3 @@ function getRaumInstrumente($id){
     $result =$wpdb->get_results( $query);
     return $result;
 }
-
-/**
- * Wordpress function to bind actions
- */
-add_action( 'wp_ajax_getRaumKurse', 'getRaumKurse' );
-/**
- * Wordpress function to bind actions
- */
