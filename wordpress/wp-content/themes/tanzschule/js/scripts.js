@@ -8,12 +8,11 @@ $.ajax({
     dataType: "json",
     success: function (response){
         console.log(response);
-        var test = response;
-        for ( i in test) {
-            console.log(response[i]);
+        for ( i in response) {
+            console.log(this);
             var time = response[i].Uhrzeit;
             var day = response[i].Tag;
             $('tr[data-time="' + time + '"] td.' + day + '').addClass('blocked')
-        };
+        }
     }
 });
