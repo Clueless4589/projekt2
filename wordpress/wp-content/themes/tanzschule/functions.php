@@ -11,6 +11,9 @@ function enquiIt()
     wp_register_script('main', get_template_directory_uri() . '/dist/js/main.min.js');
     wp_enqueue_script('main');
 
+    wp_register_script('isotope', get_template_directory_uri() . '/dist/js/isotope.pkgd.js');
+    wp_enqueue_script('isotope');
+
     wp_register_script('script', get_template_directory_uri() . '/js/scripts.js');
     wp_enqueue_script('script');
 
@@ -59,6 +62,14 @@ WHERE ms_lehrer.LehrerId =" .$_GET['id'];
 function getInstrumente($id){
     global $wpdb;
     $query = "SELECT ms_instrumente.Bezeichnung FROM ms_instrumente JOIN ms_instrumentlehrer on  ms_instrumentlehrer.InstrumentId = ms_instrumente.InstrumentId WHERE ms_instrumentlehrer.LehrerId = " . $id;
+    $result = $wpdb->get_results( $query);
+    return $result;
+}
+
+/*Get an Array of All Instruments*/
+function getAllInstrumente(){
+    global $wpdb;
+    $query = "SELECT ms_instrumente.Bezeichnung FROM ms_instrumente";
     $result = $wpdb->get_results( $query);
     return $result;
 }
@@ -175,6 +186,15 @@ JOIN ms_raeume on ms_unterricht.RaumId = ms_raeume.RaumId";
         $result =$wpdb->get_results( $query);
     return $result;
 }
+
+function getAllRaum(){
+    global $wpdb;
+    $query = "SELECT * FROM ms_raeume";
+
+    $result =$wpdb->get_results( $query);
+    return $result;
+}
+
 /**
  * Get data for all cources of a room
  *
@@ -187,6 +207,13 @@ function getRaumKurse($id){
     $result =$wpdb->get_results( $query);
     echo json_encode($result);
     die();
+}
+function getRaumInstrumente($id){
+    global $wpdb;
+    $query = "SELECT ms_instrumente.Bezeichnung AS Instrument, ms_rauminstrumente.Raumid  FROM ms_rauminstrumente JOIN ms_instrumente ON ms_instrumente.InstrumentId = ms_rauminstrumente.InstrumentenId WHERE ms_rauminstrumente.RaumId = ". $id;
+
+    $result =$wpdb->get_results( $query);
+    return $result;
 }
 
 /**
