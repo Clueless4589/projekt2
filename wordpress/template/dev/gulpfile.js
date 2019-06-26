@@ -70,6 +70,7 @@ var mainJsFiles = [
     // nodemodulesPath + 'bootstrap/js/dist/scrollspy.js',
     nodemodulesPath + 'bootstrap/js/dist/tab.js',
     // nodemodulesPath + 'bootstrap/js/dist/tooltip.js',
+    nodemodulesPath + 'isotope-layout/dist/isotope.pkgd.js',
     srcPath + 'js/vendor/svgxuse.min.js',
     srcPath + 'js/cookie.js',
     srcPath + 'js/main.js'

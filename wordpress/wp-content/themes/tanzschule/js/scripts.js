@@ -1,4 +1,4 @@
-$.ajax({
+jQuery.ajax({
     type: "POST",
     url: "/tanzschule/wordpress/wp-admin/admin-ajax.php",
     data: ({
