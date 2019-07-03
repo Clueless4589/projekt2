@@ -13,7 +13,7 @@
                                         monatliche Einnahmen:
                                     </td>
                                     <td>
-                                        1
+
                                     </td>
                                 </tr>
                                 <tr>
