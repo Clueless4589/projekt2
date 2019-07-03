@@ -220,3 +220,8 @@ function getRaumInstrumente($id){
     $result =$wpdb->get_results( $query);
     return $result;
 }
+
+function getStatistics(){
+    global $wpdb;
+    $query = "SELECT ms_lehrer.Count() as LehrerAnzahl, ms_sc";
+}
