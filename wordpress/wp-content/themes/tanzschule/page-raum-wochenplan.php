@@ -27,10 +27,6 @@ $raum= getAllRaum();
                     </div>
 
                     <div class="row grid mt-5">
-
-
-
-
                         <?php
                         foreach ($raum as $raumitem) {
                             $id= $raumitem->RaumId;
@@ -41,15 +37,14 @@ $raum= getAllRaum();
                                 $instrument= $rauminstrument->Instrument;
                                 echo $instrument.' ';
                             }?>">
+                                <a href="<?php echo get_template_directory_uri() ?>/raum-detail?id=<?php echo $id ?>">
                                 <div class="element-item-container">
-                                        <p>
-                                            <a href="<?php echo get_template_directory_uri() ?>/raum-detail?id=<?php echo $id ?>">
 
-                                            <?php echo $raumname?>
-                                            </a>
-                                        </p>
+                                    <p>Raum:</p>
+                                    <p><?php echo $raumname?></p>
 
                                 </div>
+                                </a>
                             </div>
 
 

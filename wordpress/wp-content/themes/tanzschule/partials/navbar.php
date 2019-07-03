@@ -17,7 +17,7 @@
                            </a>
                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                <a class="dropdown-item" href="<?php echo get_home_url()?>/lehrer-liste">Lehrerliste</a>
-                               <a class="dropdown-item" href="#">Raumplan</a>
+                               <a class="dropdown-item" href="<?php echo get_home_url()?>/raum-wochenplan">Raumplan</a>
                            </div>
                        </li>
                        <li class="nav-item dropdown">
@@ -28,6 +28,7 @@
                                <a class="dropdown-item" href="<?php echo get_home_url()?>/verwaltung-lehrerliste">Lehrerliste</a>
                                <a class="dropdown-item" href="<?php echo get_home_url()?>/aufnahmeantrag">Aufnahmeantrag</a>
                                <a class="dropdown-item" href="<?php echo get_home_url()?>/statistiken">Statistiken</a>
+                               <a class="dropdown-item" href="<?php echo get_home_url()?>/raum-wochenplan">Raumplan</a>
                            </div>
                        </li>
                    </ul>

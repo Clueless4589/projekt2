@@ -4,13 +4,17 @@
   justify-content: space-evenly;
 }
 
-.element-item-container a{
+.element-item-container{
   padding:1rem;
   border:1px solid $color-orange;
+  font-size: 1rem;
+  text-align:center;
+
   p{
     margin:0;
   }
-  a{
-    font-size: 1rem;
-  }
+}
+
+.grid >div{
+  margin-top:1rem;
 }

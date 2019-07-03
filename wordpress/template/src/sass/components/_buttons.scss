@@ -11,9 +11,10 @@
   color:$color-white;
   font-size:1.3rem;
   min-width: 150px;
+  border:2px solid $color-orange;
 
-  &:hover{
-    border:2px solid $color-orange;
+
+  &:hover, &:active{
     background-color: transparent;
     color:$color-orange;
   }
